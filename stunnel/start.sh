@@ -108,7 +108,8 @@ start() {
 
 case "$1" in
     start) start ;;
+    stop) stop ;;
     example) example_conf ;;
     regenerate) generate_certs ;;
-    *) echo "Usage: $0 start|example|regenerate" ;;
+    *) echo "Usage: $0 start|stop|regenerate" ;;
 esac
