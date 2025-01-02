@@ -1,0 +1,12 @@
+services:
+  vpn:
+    image: openvpn:latest
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./conf:/etc/openvpn/clients_conf/
+  
+  st:
+    image: stunnel:latest
+    ports:
+      - 5050:5050
